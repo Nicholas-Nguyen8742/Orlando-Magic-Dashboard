@@ -1,15 +1,17 @@
-import './styles/App.css';
+import './styles/App.scss';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
+import SignUpPage from './pages/SignUpPage/SignUpPage';
 
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={HomePage}/>
-      </Routes>
+      <Switch>
+        <Route path="/" component={HomePage}/>
+        <Route path="/signup" component={SignUpPage}/>
+      </Switch>
     </BrowserRouter>
   );
 }
