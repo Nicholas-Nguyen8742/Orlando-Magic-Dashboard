@@ -9,8 +9,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={HomePage}/>
-        <Route path="/signup" component={SignUpPage}/>
+        <Route path="/" exact component={HomePage}/>
+        <Route path="/signup" exact component={SignUpPage}/>
       </Switch>
     </BrowserRouter>
   );

@@ -24,6 +24,7 @@
     &__nav {
         padding: 0.5rem 0 1rem 0;
     }
+    
     &__item-inactive {
         color: $Primary-Silver;
         height: 2.25rem;
@@ -32,6 +33,7 @@
         text-align: center;
         border-radius: 20px;
         cursor: pointer;
+        text-decoration: none;
         &:hover {
             color: $Primary-Silver;
             text-decoration: underline;
