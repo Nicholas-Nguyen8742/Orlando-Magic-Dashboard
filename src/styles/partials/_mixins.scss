@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+/*Tablet Mixin = {768px or 48rem}*/
+@mixin tablet {
+    @media screen and (min-width: $Tablet-Breakpoint) {
+        @content;
+    }
+}
+
+/*Desktop Mixin = {1280px or 80rem}*/
+@mixin desktop {
+    @media screen and (min-width: $Desktop-Breakpoint) {
+        @content;
+    }
+}
