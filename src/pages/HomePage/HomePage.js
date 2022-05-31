@@ -5,12 +5,12 @@ import Header from '../../components/Header/Header';
 
 export default function HomePage() {
     return (
-        <div>
+        <>
             <Header />
-            <main>
+            <main className='loginPage'>
                 <LoginForm />
             </main>
-        </div>
+        </>
     );
 }
 

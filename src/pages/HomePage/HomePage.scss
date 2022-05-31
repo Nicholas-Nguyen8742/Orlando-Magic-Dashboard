@@ -2,3 +2,8 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/typography' as *;
 
+.loginPage {
+    background-color: rgba($Primary-Silver, .5);
+    height: 100vh;
+    
+}

@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+// Responsive Design Mixins
 /*Tablet Mixin = {768px or 48rem}*/
 @mixin tablet {
     @media screen and (min-width: $Tablet-Breakpoint) {
@@ -13,3 +14,91 @@
         @content;
     }
 }
+
+// Type Kit Mixins 
+/*Mobile TypeKit*/
+@mixin M-PageHeader {
+    font-size: 2rem;
+    font-weight: $Font-Light;
+    line-height: 2.5rem;
+} // <h1>
+
+@mixin M-SectionHeader {
+    font-size: 1.75rem;
+    font-weight: $Font-Bold;
+    line-height: 2.25rem;
+} // <h2>
+
+@mixin M-SubHeader {
+    font-size: 1.75rem;
+    font-weight: $Font-Bold;
+    line-height: 2.25rem;
+} // <h3>. Labels, Links, & Buttons
+
+@mixin M-TableHeader {
+    font-size: 0.6875rem;
+    font-weight: $Font-Medium;
+    line-height: 1rem;
+} // <h4> Table Headers
+
+@mixin M-P1 {
+    font-size: 0.9375rem;
+    font-weight: $Font-Regular;
+    line-height: 1.625rem;
+} // <p> Body-Large
+
+@mixin M-P2 {
+    font-size: 0.8125rem;
+    font-weight: $Font-Regular;
+    line-height: 1.25rem;
+} // <p> Body-Medium
+
+@mixin M-P3 {
+    font-size: 0.6875rem;
+    font-weight: $Font-Regular;
+    line-height: 1rem;
+} // <p> Body-Small
+
+
+/*Tablet & Desktop TypeKit*/
+@mixin T-PageHeader {
+    font-size: 2rem;
+    font-weight: $Font-Light;
+    line-height: 2.5rem;
+} // <h1>
+
+@mixin T-SectionHeader {
+    font-size: 1.75rem;
+    font-weight: $Font-Bold;
+    line-height: 2.25rem;
+} // <h2>
+
+@mixin T-SubHeader {
+    font-size: 1.75rem;
+    font-weight: $Font-Bold;
+    line-height: 2.25rem;
+} // <h3>. Labels, Links, & Buttons
+
+@mixin T-TableHeader {
+    font-size: 0.6875rem;
+    font-weight: $Font-Medium;
+    line-height: 1rem;
+} // <h4> Table Headers
+
+@mixin T-P1 {
+    font-size: 0.9375rem;
+    font-weight: $Font-Regular;
+    line-height: 1.625rem;
+} // <p> Body-Large
+
+@mixin T-P2 {
+    font-size: 0.8125rem;
+    font-weight: $Font-Regular;
+    line-height: 1.25rem;
+} // <p> Body-Medium
+
+@mixin T-P3 {
+    font-size: 0.6875rem;
+    font-weight: $Font-Regular;
+    line-height: 1rem;
+} // <p> Body-Small

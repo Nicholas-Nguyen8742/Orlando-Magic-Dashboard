@@ -11,21 +11,20 @@
     }
 
     &__input {
-        color: $Primary-Black;
-        color: rgba($Secondary-Gray, $alpha: 0.8);
-        background-color: rgba($Secondary-Black, $alpha: 0.12);
-        border: none;
+        color: rgba($Primary-Black, $alpha: 1);
+        background-color: rgba($Primary-Black, $alpha: 0.12);
+        border: 1px solid rgba($Primary-Black, $alpha: .25);
         padding: 0.75rem 1rem;
         margin: 0;
         margin-bottom: 1rem;
         width: 100%;
         border-radius: 4px;
         &::placeholder {
-            color: rgba($Secondary-Gray, $alpha: 0.8);
+            color: rgba($Primary-Silver, $alpha: 0.8);
         }
         &:focus {
             outline: none;
-            border: 2px solid $Primary-Yellow;
+            border: 1px solid $Primary-Blue;
         }
     }
     &__group {
@@ -49,11 +48,9 @@
                 }
             }
             &__message {
-                @include body-small-mobile;
                 color: red;
                 margin-left: 0.25rem;
                 @include tablet {
-                    @include body-small-desktop;
                 }
             }
         }
