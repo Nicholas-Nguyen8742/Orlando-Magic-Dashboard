@@ -2,6 +2,7 @@ import './DashBoardPage.scss';
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 // import Header from '../../components/Header/Header';
+import DashboardNav from '../../components/DashboardNav/DashboardNav';
 
 export default class DashBoardPage extends Component {
     state = {
@@ -38,6 +39,7 @@ export default class DashBoardPage extends Component {
 
         return (
             <main className='dashboard-page'>
+                <DashboardNav />
                 <div className='dashboard-content'>
                 </div>
             </main>

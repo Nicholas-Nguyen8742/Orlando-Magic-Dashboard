@@ -1,0 +1,161 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.nav {
+    position: fixed;
+    padding: 3rem 1.5rem;
+    // width: 17rem;
+    background-color: $Primary-Blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    z-index: 3;
+
+    &__profile {
+        border-radius: 50%;
+        border: 0.5px solid $Primary-White;
+        padding: .25rem;
+        object-fit: cover;
+        width: 3rem;
+        height: 3rem;
+
+        @include tablet {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    &__user {
+        display: none;
+
+        @include tablet {
+            display: unset;
+            padding: 0.5rem;
+            padding-bottom: 5rem;
+
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    &__item-inactive {
+        color: $Primary-White;
+        cursor: pointer;
+        text-decoration: none;
+        width: 100%;
+        margin: .015rem 0;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        height: 3.75rem;
+        border-right: transparent solid 3px;
+
+        &:hover {
+            position: relative;
+            z-index: 1;
+            border-right: $Primary-White solid 3px;
+
+            &:before {
+                content: '';
+                background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+                opacity: 0.1;
+                position: absolute;
+                z-index: -1;
+                width: 96%;
+                height: 101%;
+            }
+        }
+    }
+
+    &__item-active {
+        position: relative;
+        align-items: center;
+        z-index: 1;
+        border-right: #FBE312 solid 3px;
+
+        &:before {
+            content: '';
+            background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+            opacity: 0.1;
+            position: absolute;
+            z-index: -1;
+            width: 98%;
+            height: 102%;
+        }
+    }
+
+    &__icon {
+        &-home {
+            height: 2rem;
+            margin-right: 1rem;
+        }
+
+        &-profile {
+            height: 1.85rem;
+            margin-right: 1.15rem;
+        }
+
+        &-team {
+            height: 3rem;
+            margin-right: .5rem;
+            margin-left: -.5rem;
+        }
+
+        &-logout {
+            height: 2.25rem;
+            margin-right: 0.5rem;
+        }
+
+    }
+
+    &__text {
+        display: none;
+
+        @include tablet {
+            display: unset;
+        }
+
+    }
+
+    &__logout {
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+        width: 100%;
+        height: 3.75rem;
+        margin: .015rem 0;
+        padding: 0.5rem;
+        margin-top: auto;
+        background-color: transparent;
+        border: none;
+        color: $Primary-White;
+
+        &:hover {
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            border-right: $Primary-White solid 3px;
+
+            &:before {
+                content: '';
+                background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+                opacity: 0.1;
+                position: absolute;
+                z-index: -1;
+                width: 96%;
+                height: 101%;
+            }
+        }
+    }
+
+}
