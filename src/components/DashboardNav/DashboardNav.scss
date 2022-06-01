@@ -60,7 +60,6 @@
         align-self: flex-start;
         width: 100%;
         padding-top: 2rem;
-
         @include tablet {
             padding-top: unset;
         }
@@ -73,8 +72,6 @@
         padding: 0.5rem;
         display: flex;
         justify-content: center;
-
-
         @include tablet {
             justify-content: unset;
             align-items: center;
@@ -91,7 +88,7 @@
 
                 &:before {
                     content: '';
-                    background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+                    background: linear-gradient(270.06deg, $Primary-Silver 0.03%, rgba(251, 227, 18, 0) 99.94%);
                     opacity: 0.1;
                     position: absolute;
                     z-index: -1;
@@ -106,13 +103,13 @@
         position: relative;
         align-items: center;
         z-index: 1;
-        border-right: #FBE312 solid 3px;
+        border-right: $Primary-Silver solid 3px;
 
         @include tablet {
 
             &:before {
                 content: '';
-                background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+                background: linear-gradient(270.06deg, $Primary-Silver 0.03%, rgba(251, 227, 18, 0) 99.94%);
                 opacity: 0.1;
                 position: absolute;
                 z-index: -1;
