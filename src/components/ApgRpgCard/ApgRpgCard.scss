@@ -7,6 +7,7 @@
     box-shadow: $Box-Shadow;
     display: flex;
     flex-direction: column;
+    border-radius: 6px;
 
     &__button {
         margin-top: 2rem;
