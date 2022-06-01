@@ -8,11 +8,11 @@ import PlayerCard from '../../components/PlayerCard/PlayerCard';
 
 export default class TeamPage extends Component {
     state = {
-        players: [], 
+        players: [],
     }
 
     componentDidMount() {
-        axios.get(`${API_URL}/team`) 
+        axios.get(`${API_URL}/team`)
             .then((res) => {
                 console.log(res.data);
                 this.setState({
@@ -27,18 +27,20 @@ export default class TeamPage extends Component {
             <main className='team-page'>
                 <DashboardNav id={1} />
                 <div className='team-main'>
-                {players.map((player) => (
-                    <PlayerCard 
-                        key={player.playerID}
-                        playerID={player.playerID}
-                        name={player.name}
-                        image={player.image}
-                        ppg={player.PPG}
-                        rpg={player.RPG}
-                        efg={`${player}.eFG%`}
-                        vi={player.VI}
-                        />
-                ))}
+                    <div className='team-players'>
+                        {players.map((player) => (
+                            <PlayerCard
+                                key={player.playerID}
+                                playerID={player.playerID}
+                                name={player.name}
+                                image={player.image}
+                                ppg={player.PPG}
+                                rpg={player.RPG}
+                                efg={`${player}.eFG%`}
+                                vi={player.VI}
+                            />
+                        ))}
+                    </div>
                 </div>
             </main>
         );

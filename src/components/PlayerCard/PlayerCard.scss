@@ -22,9 +22,29 @@
         background-position: center;
         background-size: cover;
         object-fit: contain;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-end;
+        // background: rgb(196,206,212);
+    }
+    &-bottom {
+        margin: 0.5rem;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        justify-content: space-between;
+        height: 30%;
+        &__name {
+            @include M-P1;
+            @include tablet {
+                @include T-P1;
+            }
+        }
+        &__stat{
+            @include M-P3; 
+            @include tablet {
+                @include T-P3;
+            }
+        }
     }
     &__icon {
         height: 1.5rem;
