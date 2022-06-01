@@ -23,12 +23,8 @@
         height: fit-content;
     }
     &__title {
-        @include M-PageHeader;
         margin-top: 2rem;
         color: $Primary-Black;
-        @include tablet{
-            @include T-PageHeader;
-        }
     }
     &__content {
         color: $Primary-Black;

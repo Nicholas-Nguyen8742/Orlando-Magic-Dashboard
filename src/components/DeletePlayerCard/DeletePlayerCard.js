@@ -19,7 +19,7 @@ export default class DeletePlayerCard extends Component {
                     <div className="popup">
                         <button className="popup__close" onClick={close}>&times;</button>
                         <div className="popup__text">
-                            <h1 className="popup__title">Delete {this.props.name} Player from the database? </h1>
+                            <h2 className="popup__title">Delete {this.props.name} Player from the database? </h2>
                             <p className="popup__content">Please confirm that you’d like to delete Player {this.props.name} from your roster of players. You won’t be able to undo this action.</p>
                         </div>
                         <div className="popup__actions">

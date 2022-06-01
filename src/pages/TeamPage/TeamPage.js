@@ -24,8 +24,9 @@ export default class TeamPage extends Component {
     render() {
         const { players } = this.state;
         return (
-            <main className='dashboard-page'>
+            <main className='team-page'>
                 <DashboardNav id={1} />
+                <div className='team-main'>
                 {players.map((player) => (
                     <PlayerCard 
                         key={player.playerID}
@@ -38,6 +39,7 @@ export default class TeamPage extends Component {
                         vi={player.VI}
                         />
                 ))}
+                </div>
             </main>
         );
     }
