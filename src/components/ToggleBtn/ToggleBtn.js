@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ToggleBtn({ onClick }) {
     return (
-        <div className="switch-button">
+        <div className="switch-button barchart__button">
             <input className="switch-button-checkbox" type="checkbox" onClick={onClick}></input>
             <label className="switch-button-label" htmlFor=""><span className="switch-button-label-span">RPG</span></label>
         </div>

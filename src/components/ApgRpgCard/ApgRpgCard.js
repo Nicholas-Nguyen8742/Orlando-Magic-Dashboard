@@ -28,7 +28,6 @@ const ApgRpgCard = ({ barChartRPG, barChartAPG }) => {
     return (
         <article className='barchart'>
             <ToggleBtn onClick={onClick} />
-            <h3 className='barchart__title'>APG & RPG</h3>
             <BarChart
                 ref={ref}
                 data={statMode === "RPG" ? RPG : APG}

@@ -7,8 +7,11 @@ $Primary-Blue: #0077c0;
 $Primary-Black: #000000;
 $Primary-Silver: #C4CED4;
 $Primary-White: #ffffff;
+$Primary-Gray: #3B3A39;
+
 
 /*Main Content Background-Color*/
+$Background-Black: rgba($Primary-Gray, .75);
 $Background: rgba($Primary-Silver, 0.5);
 $Box-Shadow: 5px 5px 5px 5px rgba($Primary-Black, 0.25);
 $Box-Hover: 7px 7px 7px 7px rgba($Primary-Black, 0.45);

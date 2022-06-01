@@ -1,0 +1,17 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.barchart {
+    background-color: $Background-Black;
+    box-shadow: $Box-Shadow;
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+        margin-top: 2rem;
+        margin-bottom: -4rem;
+        align-self: center;
+    }
+
+}
