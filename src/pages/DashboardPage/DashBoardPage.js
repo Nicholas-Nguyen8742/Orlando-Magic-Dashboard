@@ -19,8 +19,11 @@ export default class DashBoardPage extends Component {
 
                 // Cleans Data for use in D3 Piechart
                 const filteredData = ppgData.map((player) => {
-                    // x: PlayerName Value 
-                    const x = Object.values(player).shift();
+                    // x: PlayerName Initals
+                    const name = Object.values(player).shift();
+                    // Regex to get initials
+                    const x = name.match(/(^\S\S?|\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase();
+
                     // y: Player's PPG Score Value
                     const y = Object.values(player).pop();
 
@@ -63,7 +66,7 @@ export default class DashBoardPage extends Component {
         //     )
         // }
 
-        if (!ppgData.length === 0) {
+        if (ppgData.length === 0) {
             return (
                 <LoadingPage text={`You must be logged in to see this page.`} link={`Login`} />
             )

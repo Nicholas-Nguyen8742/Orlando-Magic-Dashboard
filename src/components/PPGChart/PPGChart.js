@@ -65,9 +65,9 @@ export default class PPGChart extends Component {
             .append('text')
             .text(d => d.data.x)
             .style("text-anchor", "middle")
-            .style("font-weight", 600)
+            .style("font-weight", 500)
             .style("fill", '#222')
-            .style("font-size", 8);
+            .style("font-size", 16);
 
         // y: Label of Player's PPG
         svg
@@ -75,7 +75,7 @@ export default class PPGChart extends Component {
             .append('text')
             .text((d) => { return d.data.y })
             .style("fill", '#444')
-            .style("font-size", 16)
+            .style("font-size", 14)
             .style("text-anchor", "middle")
             .attr("y", 16);
     }
