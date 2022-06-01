@@ -4,13 +4,16 @@ import axios from 'axios';
 import { API_URL } from '../../utils/API';
 import DashboardNav from '../../components/DashboardNav/DashboardNav';
 import PPGChart from '../../components/PPGChart/PPGChart';
+import RpgApgBarChart from '../../components/RpgApgBarChart/RpgApgBarChart';
 import LoadingPage from '../LoadingPage/LoadingPage';
 
 export default class DashBoardPage extends Component {
     state = {
         user: null,
         failedAuth: false,
-        ppgData: []
+        ppgData: [],
+        barChartRPG: [],
+        barChartAPG: []
     }
     componentDidMount() {
         axios.get(`${API_URL}/team/ppg`)
@@ -37,16 +40,62 @@ export default class DashBoardPage extends Component {
                 return filteredData;
             })
             .then((res) => {
-                console.log(res);
                 this.setState({
                     ppgData: res
-
                 })
             })
+        axios.get(`${API_URL}/team/RPG-APG`)
+            .then((res) => {
+                const data = res.data;
+                // [APG Data] Cleans Data for use in D3 Piechart 
+                const apgData = data.map((player) => {
+                    // x: PlayerName Initals
+                    const name = Object.values(player).shift();
+                    // Regex to get initials
+                    const x = name.match(/(^\S\S?|\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase();
+
+                    // y: Player's APG Score Value
+                    const y = Object.values(player).pop();
+
+                    let dataElement = {
+                        x: x,
+                        y: y
+                    }
+                    return dataElement;
+
+                })
+                this.setState({
+                    barChartAPG: apgData,
+                })
+                return data;
+            })
+            .then((res) => {
+                // [RPG Data] Cleans Data for use in D3 Piechart 
+                const rpgData = res.map((player) => {
+                    // x: PlayerName Initals
+                    const name = Object.values(player).shift();
+                    // Regex to get initials
+                    const x = name.match(/(^\S\S?|\b\S)?/g).join("").match(/(^\S|\S$)?/g).join("").toUpperCase();
+
+                    // y: Player's RPG Score Value
+                    // Takes the Value of RPG and converts to string, before it was one element array being returned.
+                    const y = Object.values(player).splice(1, 1).toString();
+                    let dataElement = {
+                        x: x,
+                        y: y
+                    }
+                    return dataElement;
+                })
+                console.log(rpgData);
+                this.setState({
+                    barChartRPG: rpgData,
+                })
+            })
+
     }
 
     render() {
-        const { ppgData } = this.state;
+        const { ppgData, barChartRPG, barChartAPG } = this.state;
 
         // if (this.state.failedAuth === false) {
         //     return (
@@ -78,6 +127,12 @@ export default class DashBoardPage extends Component {
                 <div className='dashboard-main'>
                     <PPGChart
                         data={ppgData}
+                    />
+                    <RpgApgBarChart 
+                        data={barChartRPG}
+                        id={`RPG-APG`}
+                        w={`400`}
+                        h={`600`}
                     />
                 </div>
             </main>
