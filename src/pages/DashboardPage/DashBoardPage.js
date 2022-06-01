@@ -4,7 +4,7 @@ import axios from 'axios';
 import { API_URL } from '../../utils/API';
 import DashboardNav from '../../components/DashboardNav/DashboardNav';
 import PPGChart from '../../components/PPGChart/PPGChart';
-import RpgApgBarChart from '../../components/RpgApgBarChart/RpgApgBarChart';
+import BarChart from '../../components/BarChart/BarChart';
 import LoadingPage from '../LoadingPage/LoadingPage';
 
 export default class DashBoardPage extends Component {
@@ -95,8 +95,8 @@ export default class DashBoardPage extends Component {
     }
 
     render() {
-        const { ppgData, barChartRPG, barChartAPG } = this.state;
-
+        const { ppgData, barChartRPG } = this.state;
+        // barChartAPG
         // if (this.state.failedAuth === false) {
         //     return (
         //         <>
@@ -128,12 +128,13 @@ export default class DashBoardPage extends Component {
                     <PPGChart
                         data={ppgData}
                     />
-                    <RpgApgBarChart 
-                        data={barChartRPG}
-                        id={`RPG-APG`}
-                        w={`400`}
-                        h={`600`}
-                    />
+                    <article className='barchart'>
+                        <h3 className='barchart__title'>APG & RPG</h3>
+                        <BarChart
+                            data={barChartRPG}
+                        />
+                        
+                    </article>
                 </div>
             </main>
         );
