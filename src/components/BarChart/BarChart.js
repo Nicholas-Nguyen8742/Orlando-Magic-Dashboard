@@ -96,7 +96,7 @@ export default class BarChart extends Component {
             .append('svg')
             .attr('id', 'chart')
             .attr('width', width)
-            .attr('transform', 'scale(.75)')
+            .attr('transform', 'scale(.95)')
             .attr('height', height);
 
         const margin = {

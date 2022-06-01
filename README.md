@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# Orlando Magic Analytics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Just was a speed run through of the broad space that was mentioned in the Software Engineer - Basketball Analytics position for the Orlando Magic team.  
+
+## Built with: 
+
+### Front-End
+[![My Skills](https://skillicons.dev/icons?i=react,js,sass )](https://skillicons.dev)
+
+### Back-End
+[![My Skills](https://skillicons.dev/icons?i=express,mysql,nodejs)](https://skillicons.dev)
+
+## Documentation
+
+## D3js Library
+[D3js](https://d3js.org/)
+Utilized open source datasets of NBA player stats to be able to practice data visualization for the Orlando Magic. 
+
+### Donut Chart - Points Per Game
+Connected front-end to back-end API point that used mySQL & knex.js to query the data for players and their PPG score. The players names are noted by their initials.
+
+
+### Bar Graph - Assists & Rebounds Per Game 
+Connected front-end to back-end API points to have an interactive bar chart that switches data on toggling of a button. The component uses React Hooks to accomplish this change, with the initial state being Rebounds Per Game and toggles to Assists Per Game. Players names are denoted by their initials.
+
+
+
 
 ## Available Scripts
 
