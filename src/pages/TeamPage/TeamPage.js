@@ -30,13 +30,13 @@ export default class TeamPage extends Component {
                     <div className='team-players'>
                         {players.map((player) => (
                             <PlayerCard
-                                key={player.playerID}
+                                key={player.image}
                                 playerID={player.playerID}
                                 name={player.name}
                                 image={player.image}
                                 ppg={player.PPG}
                                 rpg={player.RPG}
-                                efg={`${player}.eFG%`}
+                                efg={player.eFG}
                                 vi={player.VI}
                             />
                         ))}

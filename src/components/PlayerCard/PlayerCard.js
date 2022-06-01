@@ -3,7 +3,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 // import edit from '../../assets/icons/indexIcons';
 import DeletePlayerCard from '../DeletePlayerCard/DeletePlayerCard';
-
+import { percentConvert } from '../../utils/API';
 
 export default function PlayerCard({ playerID, name, image, ppg, rpg, efg, vi }) {
     return (
@@ -19,12 +19,13 @@ export default function PlayerCard({ playerID, name, image, ppg, rpg, efg, vi })
             </div>
             <div className='playerCard-bottom'>
                 <h4 className='playerCard-bottom__name'>{name}</h4>
-                <div>
-                    <p className='playerCard-bottom__stat'>PPG: {ppg}</p>
-                    <p className='playerCard-bottom__stat'>RPG: {rpg}</p>
+                <div className='playerCard-left'>
+                    <p className='playerCard-bottom__stat'><strong>PPG</strong>: {ppg}</p>
+                    <p className='playerCard-bottom__stat'><strong>RPG</strong>: {rpg}</p>
                 </div>
-                <div>
-                    <p className='playerCard-bottom__stat'>eFG%: {efg}</p>
+                <div className='playerCard-right'>
+                    <p className='playerCard-bottom__stat'><strong>eFG</strong>: {percentConvert(efg)}%</p>
+                    <p className='playerCard-bottom__stat'><strong>VI</strong>: {vi}</p>
                 </div>
             </div>
 

@@ -30,21 +30,30 @@
     &-bottom {
         margin: 0.5rem;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        // justify-content: space-between;
         height: 30%;
         &__name {
+            margin: 0 auto;
             @include M-P1;
+            font-weight: $Font-Bold;
             @include tablet {
                 @include T-P1;
+                font-weight: $Font-Bold;
             }
         }
         &__stat{
-            @include M-P3; 
+            @include M-P2; 
             @include tablet {
-                @include T-P3;
+                @include T-P2;
             }
         }
+    }
+    &-left {
+        width: 50%;
+    }
+    &-right {
+        width: 50%;
     }
     &__icon {
         height: 1.5rem;
