@@ -1,0 +1,90 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.signUp {
+    position: relative;
+
+    &-wrapper {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, 0%);
+            width: 100%;
+        }
+    }
+
+    &__form {
+        background-color: $Primary-White;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: auto;
+        padding: 2rem 2.5rem;
+        height: 100vh;
+
+        @include tablet {
+            margin-top: 2rem;
+            padding: 4rem 2.5rem;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__title {
+        width: fit-content;
+        color: $Primary-Black;
+        padding-bottom: 1rem;
+    }
+
+    &__btn {
+        border-radius: 20px;
+        width: 100%;
+        padding: 0.5rem 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        margin-top: 1rem;
+        background-color: $Primary-Blue;
+        transition: transform 80ms ease-in;
+        color: $Primary-White;
+
+        &:focus {
+            transform: scale(0.95);
+        }
+
+        &:hover {
+            background-color: $Primary-Silver;
+            color: $Primary-Blue;
+            cursor: pointer;
+            outline: .5px solid $Primary-Blue;
+        }
+    }
+
+    &__login {
+        display: flex;
+        margin-top: 2rem;
+
+        &__body {
+            color: $Primary-Black;
+            margin-right: 0.5rem;
+        }
+
+        &__link {
+
+            color: $Primary-Blue;
+            cursor: pointer;
+
+            &:hover {
+                color: $Primary-Silver;
+            }
+        }
+    }
+}

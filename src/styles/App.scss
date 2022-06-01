@@ -3,13 +3,58 @@
 @use './partials/typography' as *;
 
 
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
+html,
+body {
     font-family: $Font-Family;
 }
 
+h1 {
+    @include M-PageHeader;
+
+    @include tablet {
+        @include T-PageHeader;
+    }
+}
+
+h2 {
+    @include M-SectionHeader;
+
+    @include tablet {
+        @include T-SectionHeader;
+    }
+}
+
+h3 {
+    @include M-SubHeader;
+
+    @include tablet {
+        @include T-SubHeader;
+    }
+}
+
+h4 {
+    @include M-TableHeader;
+
+    @include tablet {
+        @include T-TableHeader;
+    }
+}
+
+p,
+a,
+button,
+label {
+    @include M-P1;
+
+    @include tablet {
+        @include T-P1;
+    }
+}

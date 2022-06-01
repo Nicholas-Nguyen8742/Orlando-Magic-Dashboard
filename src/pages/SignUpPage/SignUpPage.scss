@@ -2,11 +2,11 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/typography' as *;
 
-.loginPage {
+.signUpPage {
     background-color: rgba($Primary-Silver, .5);
     height: 100vh;
     @include tablet {
         height: 100%;
-        min-height: 100vh;
+        min-height: 140vh;
     }
 }

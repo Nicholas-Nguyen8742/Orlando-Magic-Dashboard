@@ -1,0 +1,113 @@
+@use 'variables' as *;
+
+// Responsive Design Mixins
+/*Tablet Mixin = {768px or 48rem}*/
+@mixin tablet {
+    @media screen and (min-width: $Tablet-Breakpoint) {
+        @content;
+    }
+}
+
+/*Desktop Mixin = {1280px or 80rem}*/
+@mixin desktop {
+    @media screen and (min-width: $Desktop-Breakpoint) {
+        @content;
+    }
+}
+
+// Type Kit Mixins [M - Mobile], [T -Tablet & Desktop]
+/*H1 - Page Header*/
+@mixin M-PageHeader {
+    font-size: 2rem;
+    font-weight: $Font-Light;
+    line-height: 2.5rem;
+}
+
+@mixin T-PageHeader {
+    font-size: 3.25rem;
+    font-weight: $Font-Light;
+    line-height: 3.75rem;
+}
+
+
+/*H2 - Section Header*/
+@mixin M-SectionHeader {
+    font-size: 1.75rem;
+    font-weight: $Font-Bold;
+    line-height: 2.25rem;
+}
+
+@mixin T-SectionHeader {
+    font-size: 2rem;
+    font-weight: $Font-Bold;
+    line-height: 2.5rem;
+}
+
+
+/*H3*/
+@mixin M-SubHeader {
+    font-size: 1.25rem;
+    font-weight: $Font-Medium;
+    line-height: 1.75rem;
+}
+
+@mixin T-SubHeader {
+    font-size: 1.5rem;
+    font-weight: $Font-Medium;
+    line-height: 2rem;
+}
+
+
+/*H4 - Table Header, Labels & Buttons*/
+@mixin M-TableHeader {
+    font-size: 0.6875rem;
+    font-weight: $Font-Medium;
+    line-height: 1rem;
+}
+
+@mixin T-TableHeader {
+    font-size: 0.6875rem;
+    font-weight: $Font-Medium;
+    line-height: 1rem;
+}
+
+
+/*P1 - Body-Large & Links*/
+@mixin M-P1 {
+    font-size: 0.9375rem;
+    font-weight: $Font-Regular;
+    line-height: 1.625rem;
+}
+
+@mixin T-P1 {
+    font-size: 0.9375rem;
+    font-weight: $Font-Regular;
+    line-height: 1.625rem;
+}
+
+
+/*P2 - Body-Medium*/
+@mixin M-P2 {
+    font-size: 0.8125rem;
+    font-weight: $Font-Regular;
+    line-height: 1.25rem;
+}
+
+@mixin T-P2 {
+    font-size: 0.8125rem;
+    font-weight: $Font-Regular;
+    line-height: 1.25rem;
+}
+
+/*P3 - Body-Small*/
+@mixin M-P3 {
+    font-size: 0.6875rem;
+    font-weight: $Font-Regular;
+    line-height: 1rem;
+}
+
+@mixin T-P3 {
+    font-size: 0.6875rem;
+    font-weight: $Font-Regular;
+    line-height: 1rem;
+}
