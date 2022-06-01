@@ -5,5 +5,8 @@
 .loginPage {
     background-color: rgba($Primary-Silver, .5);
     height: 100vh;
-    
+    @include tablet {
+        height: 100%;
+        min-height: 100vh;
+    }
 }

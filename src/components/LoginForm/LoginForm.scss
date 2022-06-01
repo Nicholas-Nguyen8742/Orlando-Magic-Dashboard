@@ -54,6 +54,7 @@
         margin-top: 1rem;
         background-color: $Primary-Blue;
         transition: transform 80ms ease-in;
+        color: $Primary-White;
 
         &:focus {
             transform: scale(0.95);

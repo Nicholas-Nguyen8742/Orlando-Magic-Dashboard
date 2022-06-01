@@ -5,11 +5,11 @@ import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
 export default function SignUpPage() {
     return (
-        <div>
+        <>
             <Header />
-            <main>
+            <main className='signUpPage'>
                 <SignUpForm />
             </main>
-        </div>
+        </>
     );
 }
