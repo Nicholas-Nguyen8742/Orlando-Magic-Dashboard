@@ -25,7 +25,7 @@ export default class LoginForm extends Component {
             <div className='loginForm'>
             <section className='loginForm-wrapper'>
                 <form className="loginForm__form" onSubmit={this.handleSubmit}>
-                    <h2 className="loginForm__title">Login</h2>
+                    <h1 className="loginForm__title">Login</h1>
                     <Input type="text" name="email" label="Email" value={this.state.email} onChange={this.handleChange} valid={emailValidation} />
                     <Input type="password" name="password" label="Password" value={this.state.password} onChange={this.handleChange} valid={isEmptyPassword} />
                     <button className='loginForm__btn' type="submit">Login</button>
