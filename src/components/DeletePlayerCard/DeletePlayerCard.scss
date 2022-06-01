@@ -1,0 +1,114 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.popup-overlay{
+    background-color: rgba($color: $Primary-Black, $alpha: 0.7);
+}
+.popup {
+    padding: 1.5rem 1rem;
+    background-color: $Primary-White;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+        height: 16.6875rem;
+        padding: 0 4rem 2.5rem 4rem;
+        margin: 0 3rem;
+    }
+    @include desktop {
+        padding: 3rem 4rem 3rem 4rem;
+        width: 90vh;
+        height: fit-content;
+    }
+    &__title {
+        @include M-PageHeader;
+        margin-top: 2rem;
+        color: $Primary-Black;
+        @include tablet{
+            @include T-PageHeader;
+        }
+    }
+    &__content {
+        color: $Primary-Black;
+        @include M-P1;
+        margin: 1rem 0;
+        @include tablet{
+            @include T-P1;
+            width: 100%;
+        }
+    }
+    &__actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            justify-content: flex-end;
+        }
+    }
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 14px;
+        right: 1.75rem;
+        top: 0.75rem;
+        font-size: 1.5rem;
+        background-color: $Primary-White;
+        border: none;
+        @include tablet {
+            right: 4.75rem;
+        }
+        @include desktop {
+            right: 5rem;
+        }
+    }
+    &__button-delete {
+        @include M-P1;
+        color: $Primary-White;
+        background-color: rgba($color: red, $alpha: .75);
+        height: 2.25rem;
+        padding: 0.425rem 1rem 0.825rem 1rem;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        margin-left: 0.5rem;
+        &:hover {
+            background-color: $Primary-Black;
+        }
+        @include tablet {
+            @include M-P1;
+            width: auto;
+            height: 2.375rem;
+        }
+    }
+    &__button-cancel {
+        @include M-P1;
+        color: $Primary-Silver;
+        background-color: $Primary-White;
+        height: 2.25rem;
+        padding: 0.425rem 1rem 0.825rem 1rem;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        border: 1px solid $Primary-Silver;
+        cursor: pointer;
+        margin-right: 0.5rem;
+        &:hover {
+            color: $Primary-Black;
+            border-color: $Primary-Black
+        }
+        @include tablet {
+            @include T-P1;
+            width: auto;
+            height: 2.375rem;
+        }
+    }
+
+  
+  
+}
