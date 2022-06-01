@@ -3,7 +3,7 @@
 @use '../../styles/partials/typography' as *;
 
 .signUpPage {
-    background-color: rgba($Primary-Silver, .5);
+    background-color: $Background;
     height: 100vh;
     @include tablet {
         height: 100%;

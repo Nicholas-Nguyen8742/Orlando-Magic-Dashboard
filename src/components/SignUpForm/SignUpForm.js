@@ -26,7 +26,7 @@ export default class SignUpForm extends Component {
             <div className='signUp'>
             <section className='signUp-wrapper'>
                 <form className='signUp__form' onSubmit={this.handleSubmit}>
-                    <h2 className='signUp__title'>Join the Team</h2>
+                    <h1 className='signUp__title'>Join the Team</h1>
                     <Input type="text" name="name" label="Name" value={this.state.firstName} onChange={this.handleChange} />
                     <Input type="email" name="email" label="Email" value={this.state.email} onChange={this.handleChange} />
                     <Input type="text" name="position" label="Position" value={this.state.position} onChange={this.handleChange} />

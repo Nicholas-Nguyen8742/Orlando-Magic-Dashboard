@@ -1,12 +1,22 @@
 /*Responsive Design Breakpoints*/
-$Tablet-Breakpoint: 48rem;
-$Desktop-Breakpoint: 80rem;
+$Tablet-Breakpoint: 40rem;
+$Desktop-Breakpoint: 64rem;
 
-/*Primary Colors (Orlanod Magic)*/
+/*Primary Colors (Orlando Magic)*/
 $Primary-Blue: #0077c0;
 $Primary-Black: #000000;
 $Primary-Silver: #C4CED4;
 $Primary-White: #ffffff;
+
+/*Main Content Background-Color*/
+$Background: rgba($Primary-Silver, 0.5);
+$Box-Shadow: 5px 5px 5px 5px rgba($Primary-Black, 0.25);
+$Box-Hover: 7px 7px 7px 7px rgba($Primary-Black, 0.45);
+
+/*Player Card Background*/
+$Card-Gradient: linear-gradient(333deg, rgba(196,206,212,1) 0%, rgba(0,119,192,1) 100%);
+
+
 
 /*Font-Family*/
 $Font-Family: 'Roboto', 'Times New Roman', sans-serif;
