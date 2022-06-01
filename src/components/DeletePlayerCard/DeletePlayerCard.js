@@ -14,7 +14,7 @@ export default class DeletePlayerCard extends Component {
 
     render() {
         return (
-            <Popup trigger={<input type="image" name="trashBin" src={deleteIcon} alt="Delete portfolio icon" className='portfolioCard__icon'></input>} modal nested>
+            <Popup trigger={<input type="image" name="trashBin" src={deleteIcon} alt="Delete portfolio icon" className='playerCard__icon'></input>} modal nested>
                 {close => (
                     <div className="popup">
                         <button className="popup__close" onClick={close}>&times;</button>
