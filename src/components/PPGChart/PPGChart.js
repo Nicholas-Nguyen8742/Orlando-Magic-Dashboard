@@ -82,10 +82,10 @@ export default class PPGChart extends Component {
 
     render() {
         return (
-            <div className="ppgChart">
+            <article className="ppgChart">
                 <h3 className="ppgChart__title">Points Per Game</h3>
                 <div className='ppgChart__chart' ref={this.chRef}></div>
-            </div>
+            </article>
         )
     }
 
