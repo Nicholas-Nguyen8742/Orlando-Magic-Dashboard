@@ -4,8 +4,8 @@ import axios from 'axios';
 import { API_URL } from '../../utils/API';
 import DashboardNav from '../../components/DashboardNav/DashboardNav';
 import PPGChart from '../../components/PPGChart/PPGChart';
-import BarChart from '../../components/BarChart/BarChart';
 import LoadingPage from '../LoadingPage/LoadingPage';
+import ApgRpgCard from '../../components/ApgRpgCard/ApgRpgCard';
 
 export default class DashBoardPage extends Component {
     state = {
@@ -15,6 +15,7 @@ export default class DashBoardPage extends Component {
         barChartRPG: [],
         barChartAPG: []
     }
+
     componentDidMount() {
         axios.get(`${API_URL}/team/ppg`)
             .then((res) => {
@@ -91,11 +92,12 @@ export default class DashBoardPage extends Component {
                     barChartRPG: rpgData,
                 })
             })
-
     }
 
-    render() {
-        const { ppgData, barChartRPG } = this.state;
+
+    render() {     
+        const { ppgData, barChartRPG, barChartAPG } = this.state;
+
         // barChartAPG
         // if (this.state.failedAuth === false) {
         //     return (
@@ -128,13 +130,7 @@ export default class DashBoardPage extends Component {
                     <PPGChart
                         data={ppgData}
                     />
-                    <article className='barchart'>
-                        <h3 className='barchart__title'>APG & RPG</h3>
-                        <BarChart
-                            data={barChartRPG}
-                        />
-                        
-                    </article>
+                    <ApgRpgCard barChartRPG={barChartRPG} barChartAPG={barChartAPG}/>
                 </div>
             </main>
         );

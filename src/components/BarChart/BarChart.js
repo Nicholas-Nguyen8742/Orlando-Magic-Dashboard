@@ -5,7 +5,7 @@ import * as d3 from 'd3';
 
 export default class BarChart extends Component {
     plot(chart, width, height) {
-        const { data}  = this.props;
+        const { data, mode }  = this.props;
         // Create scales
         const xScale = d3.scaleBand()
             .domain(data.map(d => d.x))
@@ -74,7 +74,7 @@ export default class BarChart extends Component {
             .style("font-weight", 700)
             .style('font-size', '20px')
             .style('text-anchor', 'middle')
-            .text('Rebounds Per Game');   
+            .text(`${mode} Per Game`);   
             
         // const yGridlines = d3.axisLeft()
         //     .scale(yScale)
