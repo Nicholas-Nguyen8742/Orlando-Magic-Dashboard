@@ -4,8 +4,8 @@
 
 .nav {
     position: fixed;
-    padding: 3rem 1.5rem;
     // width: 17rem;
+    padding: .5rem;
     background-color: $Primary-Blue;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 20px 20px 0px;
@@ -15,13 +15,17 @@
     height: 100vh;
     z-index: 3;
 
+    @include tablet {
+        padding: 3rem 1.5rem;
+    }
+
     &__profile {
         border-radius: 50%;
         border: 0.5px solid $Primary-White;
         padding: .25rem;
         object-fit: cover;
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
 
         @include tablet {
             width: 5rem;
@@ -46,33 +50,44 @@
         flex-direction: column;
         align-self: flex-start;
         width: 100%;
+        padding-top: 2rem;
+
+        @include tablet {
+            padding-top: unset;
+        }
     }
 
     &__item-inactive {
         color: $Primary-White;
         cursor: pointer;
-        text-decoration: none;
-        width: 100%;
         margin: .015rem 0;
         padding: 0.5rem;
         display: flex;
-        align-items: center;
-        height: 3.75rem;
-        border-right: transparent solid 3px;
+        justify-content: center;
 
-        &:hover {
-            position: relative;
-            z-index: 1;
-            border-right: $Primary-White solid 3px;
 
-            &:before {
-                content: '';
-                background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
-                opacity: 0.1;
-                position: absolute;
-                z-index: -1;
-                width: 96%;
-                height: 101%;
+        @include tablet {
+            // align-items: center;
+            width: 100%;
+            text-decoration: none;
+            height: 3.75rem;
+            border-right: transparent solid 3px;
+            padding: 1rem;
+
+            &:hover {
+                position: relative;
+                z-index: 1;
+                border-right: $Primary-White solid 3px;
+
+                &:before {
+                    content: '';
+                    background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+                    opacity: 0.1;
+                    position: absolute;
+                    z-index: -1;
+                    width: 96%;
+                    height: 101%;
+                }
             }
         }
     }
@@ -83,37 +98,60 @@
         z-index: 1;
         border-right: #FBE312 solid 3px;
 
-        &:before {
-            content: '';
-            background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
-            opacity: 0.1;
-            position: absolute;
-            z-index: -1;
-            width: 98%;
-            height: 102%;
+        @include tablet {
+
+            &:before {
+                content: '';
+                background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+                opacity: 0.1;
+                position: absolute;
+                z-index: -1;
+                width: 98%;
+                height: 102%;
+            }
+
         }
     }
 
     &__icon {
         &-home {
-            height: 2rem;
-            margin-right: 1rem;
+            height: 1rem;
+
+            @include tablet {
+                margin-right: 1rem;
+                height: 2rem;
+            }
         }
 
         &-profile {
-            height: 1.85rem;
-            margin-right: 1.15rem;
+            height: 0.925rem;
+            align-self: center;
+
+            @include tablet {
+                margin-right: 1.15rem;
+                height: 1.85rem;
+
+            }
         }
 
         &-team {
-            height: 3rem;
-            margin-right: .5rem;
-            margin-left: -.5rem;
+            height: 1.5rem;
+
+            @include tablet {
+                margin-right: .5rem;
+                height: 3rem;
+                margin-left: -.5rem;
+
+            }
         }
 
         &-logout {
-            height: 2.25rem;
-            margin-right: 0.5rem;
+            height: 1.125rem;
+
+            @include tablet {
+                height: 2.25rem;
+                margin-right: 0.5rem;
+            }
         }
 
     }
@@ -140,22 +178,25 @@
         border: none;
         color: $Primary-White;
 
-        &:hover {
-            position: relative;
-            z-index: 1;
-            cursor: pointer;
-            border-right: $Primary-White solid 3px;
+        @include tablet {
+            height: 3.75rem;
 
-            &:before {
-                content: '';
-                background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
-                opacity: 0.1;
-                position: absolute;
-                z-index: -1;
-                width: 96%;
-                height: 101%;
+            &:hover {
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+                border-right: $Primary-White solid 3px;
+
+                &:before {
+                    content: '';
+                    background: linear-gradient(270.06deg, #fBE312 0.03%, rgba(251, 227, 18, 0) 99.94%);
+                    opacity: 0.1;
+                    position: absolute;
+                    z-index: -1;
+                    width: 96%;
+                    height: 101%;
+                }
             }
         }
     }
-
 }
