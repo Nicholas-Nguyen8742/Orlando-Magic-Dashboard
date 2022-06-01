@@ -1,29 +1,50 @@
 import './DashBoardPage.scss';
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-// import Header from '../../components/Header/Header';
 import axios from 'axios';
 import { API_URL } from '../../utils/API';
 import DashboardNav from '../../components/DashboardNav/DashboardNav';
 import PPGChart from '../../components/PPGChart/PPGChart';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 export default class DashBoardPage extends Component {
     state = {
         user: null,
         failedAuth: false,
-        ppgData: [],
+        ppgData: []
     }
     componentDidMount() {
-        axios.get(`${API_URL}/team`)
+        axios.get(`${API_URL}/team/ppg`)
             .then((res) => {
-                console.log(res.data);
+                const ppgData = res.data
+
+                // Cleans Data for use in D3 Piechart
+                const filteredData = ppgData.map((player) => {
+                    // x: PlayerName Value 
+                    const x = Object.values(player).shift();
+                    // y: Player's PPG Score Value
+                    const y = Object.values(player).pop();
+
+                    let dataElement = {
+                        x: x,
+                        y: y
+                    }
+                    return dataElement;
+
+                })
+                return filteredData;
+            })
+            .then((res) => {
+                console.log(res);
                 this.setState({
-                    ppgData: res.data,
+                    ppgData: res
+
                 })
             })
     }
 
     render() {
+        const { ppgData } = this.state;
+
         // if (this.state.failedAuth === false) {
         //     return (
         //         <>
@@ -42,24 +63,19 @@ export default class DashBoardPage extends Component {
         //     )
         // }
 
-        // if (!this.state.user) {
-        //     return (
-        //         <main className="dashboard-loading">
-        //             <p>Loading...</p>
-        //         </main>
-        //     )
-        // }
-        const { ppgData } = this.state;
+        if (!ppgData.length === 0) {
+            return (
+                <LoadingPage text={`You must be logged in to see this page.`} link={`Login`} />
+            )
+        }
+
         return (
             <main className='dashboard-page'>
                 <DashboardNav id={1} />
                 <div className='dashboard-main'>
                     <PPGChart
                         data={ppgData}
-                        pieSize={400}
-                        svgSize={500}
-                        innerRadius={50}
-                        containerId="pie" />
+                    />
                 </div>
             </main>
         );
