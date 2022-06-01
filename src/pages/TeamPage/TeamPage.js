@@ -31,6 +31,11 @@ export default class TeamPage extends Component {
                         key={player.playerID}
                         playerID={player.playerID}
                         name={player.name}
+                        image={player.image}
+                        ppg={player.PPG}
+                        rpg={player.RPG}
+                        efg={`${player}.eFG%`}
+                        vi={player.VI}
                         />
                 ))}
             </main>

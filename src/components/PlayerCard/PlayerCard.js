@@ -5,10 +5,10 @@ import React from 'react';
 import DeletePlayerCard from '../DeletePlayerCard/DeletePlayerCard';
 
 
-export default function PlayerCard({ img, id, playerID, name }) {
+export default function PlayerCard({ playerID, name, image, ppg, rpg, efg, vi  }) {
     return (
         <article className='playerCard'>
-            <div className='playerCard-top' style={{ backgroundImage: `url(${img})` }}>
+            <div className='playerCard-top' style={{ backgroundImage: `url(${image})` }}>
                 {/*<Link to={`/dashboard/1/team/${playerID}/edit`}>
                     <img className='portfolioCard__icon-edit' src={edit} alt="Edit portfolio card button" />
                 </Link>*/}
