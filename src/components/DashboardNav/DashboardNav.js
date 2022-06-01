@@ -25,7 +25,7 @@ export default function DashboardNav({ id }) {
                     <NavLink
                         activeClassName="nav__item-active"
                         className="nav__item-inactive"
-                        to={`/dashboard/${id}/missions`}
+                        to={`/dashboard/${id}/team`}
                         id={id}>
                         <img className="nav__icon-team" src={team} alt='' />
                         <h4 className='nav__text'>Team</h4>
@@ -35,7 +35,7 @@ export default function DashboardNav({ id }) {
                     <NavLink
                         activeClassName="nav__item-active"
                         className="nav__item-inactive"
-                        to={`/dashboard/${id}/portfolio`}
+                        to={`/dashboard/${id}/profile`}
                         id={id}>
                         <img className="nav__icon-profile" src={profile} alt='' />
                         <h4 className='nav__text'>Profile</h4>
