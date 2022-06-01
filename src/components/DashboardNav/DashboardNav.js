@@ -2,12 +2,13 @@ import './DashboardNav.scss';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { home, logout, profile, team } from '../../assets/icons/indexIcons';
+import profileImg from '../../assets/images/Nick.PNG';
 
 export default function DashboardNav({ id }) {
     return (
         <nav className='nav' id='mainNav'>
-            <img className='nav__profile' src={profile} alt=""></img>
-            <h3 className='nav__user'>Nick Nguyen</h3>
+            <img className='nav__profile' src={profileImg} alt=""></img>
+            <p className='nav__user'>Nick Nguyen</p>
             <ul className='nav__list'>
                 <li>
                     <NavLink

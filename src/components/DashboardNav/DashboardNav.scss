@@ -16,6 +16,9 @@
     z-index: 3;
 
     @include tablet {
+        padding: 1rem;
+    }
+    @include desktop {
         padding: 3rem 1.5rem;
     }
 
@@ -37,10 +40,10 @@
         display: none;
 
         @include tablet {
+            color: $Primary-White;
             display: unset;
             padding: 0.5rem;
             padding-bottom: 5rem;
-
         }
     }
 
@@ -67,16 +70,17 @@
 
 
         @include tablet {
-            // align-items: center;
+            justify-content: unset;
+            align-items: center;
             width: 100%;
             text-decoration: none;
             height: 3.75rem;
             border-right: transparent solid 3px;
-            padding: 1rem;
 
             &:hover {
                 position: relative;
                 z-index: 1;
+                border-right: unset;
                 border-right: $Primary-White solid 3px;
 
                 &:before {
