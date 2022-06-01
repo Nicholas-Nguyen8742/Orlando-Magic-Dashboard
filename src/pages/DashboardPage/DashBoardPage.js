@@ -40,7 +40,8 @@ export default class DashBoardPage extends Component {
         return (
             <main className='dashboard-page'>
                 <DashboardNav id={1} />
-                <div className='dashboard-content'>
+                <div className='dashboard-main'>
+                
                 </div>
             </main>
         );

@@ -84,3 +84,25 @@
 }
 
 /*dashboard*/
+.dashboard {
+    &-page {
+        display: flex;
+        height: auto;
+        min-height: 100vh;
+        background: linear-gradient(0deg, rgba(0,119,192,1) 0%, rgba(196,206,212,1) 45%);
+    }
+    &-main {
+        margin: 2rem 3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            margin-left: 10rem;
+        }
+
+        @include desktop {
+            margin-left: 19rem;
+            margin-top: 5rem;
+        }
+    }
+}
