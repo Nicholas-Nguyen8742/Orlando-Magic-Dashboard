@@ -21,14 +21,24 @@ Just was a speed run through of the broad space that was mentioned in the Softwa
 ## D3js Library
 [D3js](https://d3js.org/)
 Utilized open source datasets of NBA player stats to be able to practice data visualization for the Orlando Magic. 
+<p align="center">
+    <img src='./src/assets/readme/d3.svg' />
+</p>
 
 ### Donut Chart - Points Per Game
 Connected front-end to back-end API point that used mySQL & knex.js to query the data for players and their PPG score. The players names are noted by their initials.
-
+<p align="center">
+    <img src='./src/assets/readme/PPG-3Djs.PNG' />
+</p>
 
 ### Bar Graph - Assists & Rebounds Per Game 
 Connected front-end to back-end API points to have an interactive bar chart that switches data on toggling of a button. The component uses React Hooks to accomplish this change, with the initial state being Rebounds Per Game and toggles to Assists Per Game. Players names are denoted by their initials.
-
+<p align="center">
+    <img src='./src/assets/readme/BarRPG.PNG' />
+</p>
+<p align="center">
+    <img src='./src/assets/readme/BarAPG.PNG' />
+</p>
 
 
 
