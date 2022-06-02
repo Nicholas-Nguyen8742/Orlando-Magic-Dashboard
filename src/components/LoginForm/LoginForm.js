@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { emailValidation, isEmptyPassword } from '../../utils/formValidation';
 import Input from '../FormInput/FormInput';
+import axios from 'axios';
 
 export default class LoginForm extends Component {
     state = {
@@ -20,8 +21,25 @@ export default class LoginForm extends Component {
         });
     };
 
-    // Handle Submit Axios Request
-    
+    // Handle Login Axios Request
+    handleSubmit = (event) => {
+        event.preventDefault();
+        const { email, password } = this.state;
+        axios
+            .post('http://localhost:8080/auth/login', {
+                email,
+                password
+            })
+            .then((response) => {
+                console.log(response);
+                sessionStorage.setItem("token", response.data.token);
+                this.setState({ success: true, user: response.data.user.id });
+                event.target.reset();
+            })
+            .catch((error) => {
+                this.setState({ error: error.response.data });
+            });
+    };
 
     render() {
         return (
