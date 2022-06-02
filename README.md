@@ -49,7 +49,7 @@ Connected front-end to back-end API points to have an interactive bar chart that
     <img src='./src/assets/readme/reactRouterDom.png' />
 </p>
 
-Use of dynamic routing to have the user logged in ID in the URL. Used Single Page Application technique with switch and Browser Routers. 
+Use of dynamic routing to have the user logged in ID in the URL. Used Single Page Application technique with switch and Browser Routers.
 
 ## Components
 ### Signup Form
