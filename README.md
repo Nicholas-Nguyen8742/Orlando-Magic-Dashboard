@@ -41,7 +41,6 @@ Connected front-end to back-end API points to have an interactive bar chart that
 </p>
 
 
-
 ## Available Scripts
 
 In the project directory, you can run:
