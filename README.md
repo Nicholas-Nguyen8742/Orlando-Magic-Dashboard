@@ -16,14 +16,16 @@ Just was a speed run through of the broad space that was mentioned in the Softwa
 ### Back-End
 [![My Skills](https://skillicons.dev/icons?i=express,mysql,nodejs)](https://skillicons.dev)
 
-## Documentation
+## Libraries
 
 ## D3js Library
 [D3js](https://d3js.org/)
-Utilized open source datasets of NBA player stats to be able to practice data visualization for the Orlando Magic. 
+
 <p align="center">
     <img src='./src/assets/readme/d3.svg' />
 </p>
+
+Utilized open source datasets of NBA player stats to be able to practice data visualization for the Orlando Magic. 
 
 ### Donut Chart - Points Per Game
 Connected front-end to back-end API point that used mySQL & knex.js to query the data for players and their PPG score. The players names are noted by their initials.
@@ -39,6 +41,34 @@ Connected front-end to back-end API points to have an interactive bar chart that
 <p align="center">
     <img src='./src/assets/readme/BarAPG.PNG' />
 </p>
+
+## React Router Dom
+[React Router Dom](https://v5.reactrouter.com/web/guides/quick-start)
+
+<p align="center">
+    <img src='./src/assets/readme/reactRouterDom.png' />
+</p>
+
+Use of dynamic routing to have the user logged in ID in the URL. Used Single Page Application technique with switch and Browser Routers. 
+
+## Components
+### Signup Form
+<p align="center">
+    <img src='./src/assets/readme/SignupForm.PNG' />
+</p>
+Signup form has server side validation where the error message is displayed in a message at the bottom of the form.
+
+### Login Form 
+<p align="center">
+    <img src='./src/assets/readme/LoginForm.PNG' />
+</p>
+Login form validates using a JWT key that is in the dotenv file that verifies that the hashed password comparison is the same and was produced by our server alone.
+
+### Player Card
+<p align="center">
+    <img src='./src/assets/readme/PlayerCard.PNG' />
+</p>
+Player Cards have basic stats that are pulled from the back-end API points, future use could direct towards player pages with analytics specific to the player.
 
 
 ## Available Scripts
