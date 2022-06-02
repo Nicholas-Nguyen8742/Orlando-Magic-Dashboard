@@ -1,5 +1,11 @@
 # Orlando Magic Analytics
 
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src='./public/logo192.png' />
+  </a>
+</p>
+
 Just was a speed run through of the broad space that was mentioned in the Software Engineer - Basketball Analytics position for the Orlando Magic team.  
 
 ## Built with: 
